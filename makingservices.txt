@@ -1,0 +1,18 @@
+Process as far as I'm currently aware for how to create a service:
+new service proj in visual studio
+right click, add installer, modify
+modify main file as needed
+
+save, right click on proj name in right panel, click rebuild
+
+admin cmd prompt, cd c:\Windows\Microsoft.NET\Framework\v4.0.30319>
+
+installutil.exe  [PATH OF YOUR exe, which can be found in the terminal output of the rebuild command]
+ex:installutil.exe C:\Users\E1495970\source\repos\WindowsService1\WindowsService1\bin\Debug\WindowsService1.exe            
+
+
+net start [whatever name you set in project installer, ex:  this.serviceInstaller1.DisplayName = "Windowsservertutorial.demo";] 
+
+
+if you want to uninstall the thing for whatever reason, just use /u flag:
+ex: installutil.exe C:\Users\E1495970\source\repos\WindowsService1\WindowsService1\bin\Debug\WindowsService1.exe  /u

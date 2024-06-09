@@ -1,0 +1,12 @@
+pro plus, app station, operating station -- 3 vms, each hosted on different machine
+
+virtual network connecting vms  
+udp communication between machines
+base project is send packets between machines to overload one or more of the systems -- simulate a dos/ddos attack
+
+If I get through with that:
+version control for live
+git repo wrapped in service,tracks changes in displays 
+xml version  of display --- one has correct version, gets corrupted, detect and correct erors 
+
+
